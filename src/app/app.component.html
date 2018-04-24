@@ -1,8 +1,16 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
+<header>
+  <img src="../assets/images/NguaVanPhoto-icon.png" alt="NguaVanPhoto icon" style="float: left;width:160px;position: absolute;top: 20px;"/>
+  
+  <nav class="topnav">
+    <a routerLink="/hinh-anh">Hình ảnh</a>
+    <a routerLink="/gia">Giá</a>
+    <a routerLink="/gioi-thieu">Giới thiệu</a>
+    <a routerLink="/lien-he">Liên hệ</a>
+  </nav>
+</header>
 
+<router-outlet></router-outlet>
+<footer style="font-size:11px;">
+  Copyright &copy; NguaVanPhoto. All rights reserved.
+    <img src="../assets/images/facebook-icon.png" alt="facebook icon" style="float: right;width:20px;"/>
+</footer>
