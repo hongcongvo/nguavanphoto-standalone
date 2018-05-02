@@ -1,16 +1,23 @@
 <header>
-  <img src="../assets/images/NguaVanPhoto-icon.png" alt="NguaVanPhoto icon" style="float: left;width:160px;position: absolute;top: 20px;"/>
-  
-  <nav class="topnav">
-    <a routerLink="/hinh-anh">Hình ảnh</a>
-    <a routerLink="/gia">Giá</a>
-    <a routerLink="/gioi-thieu">Giới thiệu</a>
-    <a routerLink="/lien-he">Liên hệ</a>
-  </nav>
+  <nav class="row navbar navbar-expand-sm">
+    <div class="col-sm-8 navbar-brand ">
+        <a routerLink="/hinh-anh">
+            <img src="../assets/images/NguaVanPhoto-icon.png" alt="NguaVanPhoto icon" style="width:160px;"/>
+        </a>
+    </div>
+    
+
+         <ul class="col-sm-4 navbar-nav justify-content-end">
+                <li *ngFor="let page of pages" class="nav-item">
+                        <a class="nav-link" routerLinkActive="active" [routerLink]="page.link" >{{page.name}}</a>
+                 </li>              
+      </ul>
+ 
+  </nav>    
 </header>
 
 <router-outlet></router-outlet>
-<footer style="font-size:11px;">
+<footer style="font-size:11px; margin: 30px;">
   Copyright &copy; NguaVanPhoto. All rights reserved.
     <img src="../assets/images/facebook-icon.png" alt="facebook icon" style="float: right;width:20px;"/>
 </footer>

@@ -9,6 +9,8 @@ import { AppRoutingModule } from './/app-routing.module';
 import { GioiThieuComponent } from './gioi-thieu/gioi-thieu.component';
 import { LienHeComponent } from './lien-he/lien-he.component';
 
+import { DanhSachSanPhamComponent } from './danh-sach-san-pham/danh-sach-san-pham.component';
+import { SanPhamService } from "./san-pham.service";
 
 @NgModule({
   declarations: [
@@ -16,13 +18,15 @@ import { LienHeComponent } from './lien-he/lien-he.component';
     HinhAnhComponent,
     GiaComponent,
     GioiThieuComponent,
-    LienHeComponent
+    LienHeComponent,
+    DanhSachSanPhamComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
+    
   ],
-  providers: [],
+  providers: [SanPhamService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
