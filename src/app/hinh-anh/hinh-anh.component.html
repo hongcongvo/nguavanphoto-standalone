@@ -1,11 +1,11 @@
-<div class="row" style="margin-bottom: 20px;">
+<div class="row" >
   <div class="col-sm-10">
     <app-danh-sach-san-pham [sanPhams] = "showedSanPhams"></app-danh-sach-san-pham>
   </div>
   <div class="col-sm-2">
     <ul class="navbar-nav">
       <li *ngFor="let category of categories" class="nav-item">       
-        <a routerLink="/hinh-anh" class="nav-link" (click) = "selectCategory(category)" [ngClass]="{'active': category.id == activeCategory}" >
+        <a routerLink="/hinh-anh" class="nav-link" (click) = "selectCategory(category)" [ngClass]="{'active': category.id == activeCategory}" style="min-width: 180px;">
           <img src="../assets/images/fragrance-25-343x343.jpg" alt="NguaVanPhoto icon" style="width:40px; border: solid 0.1em #D8D9DB; margin-right: 5px;"/>
           {{category.name}}
         </a>

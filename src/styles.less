@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @font-color: black;
 @background-color: white;
+@opacity-hover: 0.8;
 
 body {
     color: @font-color;
@@ -13,6 +14,10 @@ body {
     color: @font-color;
 }
 
- .nav-link.active {
+.nav-link.active {
     color: #07bbd9
+}
+
+.nav-link:hover {
+    opacity: @opacity-hover;
 }
