@@ -13,8 +13,10 @@ export class SanPhamService {
       {name: 'sp2', pathToImage:'../../assets/images/fragrance-25-343x343.jpg'},
       {name: 'sp2', pathToImage:'../../assets/images/fragrance-25-343x343.jpg'},
       {name: 'sp2', pathToImage:'../../assets/images/fragrance-25-343x343.jpg'},
+      {name: 'sp2', pathToImage:'../../assets/images/electronics-23-343x343.jpg'},
       {name: 'sp2', pathToImage:'../../assets/images/fragrance-25-343x343.jpg'},
       {name: 'sp2', pathToImage:'../../assets/images/fragrance-25-343x343.jpg'},
+      {name: 'sp2', pathToImage:'../../assets/images/electronics-23-343x343.jpg'},
       {name: 'sp2', pathToImage:'../../assets/images/fragrance-25-343x343.jpg'},
       {name: 'sp2', pathToImage:'../../assets/images/fragrance-25-343x343.jpg'},
       {name: 'sp2', pathToImage:'../../assets/images/fragrance-25-343x343.jpg'}

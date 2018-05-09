@@ -23,13 +23,12 @@ export class HinhAnhComponent implements OnInit {
 
   getShowedSanPhams(category: Category) {
     this.showedSanPhams = this.sanPhamService.getSanPhamByCategory(category);
-    console.log(this.activeCategory);
   }
 
   selectCategory(category:Category) {
     this.getShowedSanPhams(category);
     this.activeCategory = category.id;
-    console.log(this.activeCategory);
+
   }
 
 }
