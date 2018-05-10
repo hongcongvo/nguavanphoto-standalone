@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MatDialogModule,MAT_DIALOG_DEFAULT_OPTIONS } from "@angular/material";
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {SlideshowModule} from 'ng-simple-slideshow';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SlideshowModule } from 'ng-simple-slideshow';
 
 
 import { AppComponent } from './app.component';
@@ -12,10 +12,11 @@ import { AppRoutingModule } from './/app-routing.module';
 import { GioiThieuComponent } from './gioi-thieu/gioi-thieu.component';
 import { LienHeComponent } from './lien-he/lien-he.component';
 
-import { DanhSachSanPhamComponent,DialogOverviewExampleDialog } from './danh-sach-san-pham/danh-sach-san-pham.component';
 import { SanPhamService } from "./san-pham.service";
 
 import { FormsModule } from '@angular/forms';
+import { ProductListComponent, ProductDetailDialogComponent} from './product-list/product-list.component';
+
 
 @NgModule({
   declarations: [
@@ -24,8 +25,8 @@ import { FormsModule } from '@angular/forms';
     GiaComponent,
     GioiThieuComponent,
     LienHeComponent,
-    DanhSachSanPhamComponent,
-    DialogOverviewExampleDialog
+    ProductListComponent,
+    ProductDetailDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -36,9 +37,9 @@ import { FormsModule } from '@angular/forms';
     SlideshowModule
     
   ],
-  entryComponents: [DialogOverviewExampleDialog],
+  entryComponents: [ ProductDetailDialogComponent],
 
-  providers: [SanPhamService,{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}],
+  providers: [SanPhamService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
