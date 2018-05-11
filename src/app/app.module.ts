@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, TransferState } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MatDialogModule,MAT_DIALOG_DEFAULT_OPTIONS } from "@angular/material";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -13,9 +13,11 @@ import { GioiThieuComponent } from './gioi-thieu/gioi-thieu.component';
 import { LienHeComponent } from './lien-he/lien-he.component';
 
 import { SanPhamService } from "./san-pham.service";
+//import { SlideshowComponent } from './slideshow/slideshow.component';
 
 import { FormsModule } from '@angular/forms';
 import { ProductListComponent, ProductDetailDialogComponent} from './product-list/product-list.component';
+import { SwipeService } from './slideshow/swipe.service';
 
 
 @NgModule({
@@ -26,7 +28,8 @@ import { ProductListComponent, ProductDetailDialogComponent} from './product-lis
     GioiThieuComponent,
     LienHeComponent,
     ProductListComponent,
-    ProductDetailDialogComponent
+    ProductDetailDialogComponent,
+    //SlideshowComponent
   ],
   imports: [
     BrowserModule,
@@ -36,10 +39,11 @@ import { ProductListComponent, ProductDetailDialogComponent} from './product-lis
     FormsModule,
     SlideshowModule
     
+    
   ],
   entryComponents: [ ProductDetailDialogComponent],
 
-  providers: [SanPhamService],
+  providers: [SanPhamService, /*SwipeService, TransferState*/],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
