@@ -6,8 +6,8 @@
     <ul class="navbar-nav">
       <li *ngFor="let category of categories" class="nav-item">       
         <a routerLink="/hinh-anh" class="nav-link" (click) = "selectCategory(category)" [ngClass]="{'active': category._id == activeCategory}" style="min-width: 180px;">
-          <img src="../assets/images/fragrance-25-343x343.jpg" alt="NguaVanPhoto icon" style="width:40px; border: solid 0.1em #D8D9DB; margin-right: 5px;"/>
-          {{category.categoryId}}
+          <img [src]="category.imageUrl" alt="NguaVanPhoto icon" style="width:40px; border: solid 0.1em #D8D9DB; margin-right: 5px;"/>
+          {{category.displayStr}}
         </a>
       </li>
     </ul>

@@ -8,7 +8,7 @@ export class SanPhamService {
   constructor() { }
 
   getSanPhamByCategory(category: Category) {
-    if(category.name == "Mỹ phẩm") {
+    if(category.displayStr == "Mỹ phẩm") {
       return [
       {name: 'sp2', pathToImage:'../../assets/images/fragrance-25-343x343.jpg'},
       {name: 'sp2', pathToImage:'../../assets/images/fragrance-25-343x343.jpg'},
