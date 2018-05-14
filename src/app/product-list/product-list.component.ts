@@ -56,7 +56,6 @@ export class ProductDetailDialogComponent implements OnInit {
 
   ngAfterContentInit() {
     this.slideshow.slideIndex = this.slideIndex;
-    console.log(this.slideshow.slideIndex + this.slideIndex);
   }
 
   onNoClick(): void {

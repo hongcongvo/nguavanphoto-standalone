@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { MatDialogModule,MAT_DIALOG_DEFAULT_OPTIONS } from "@angular/material";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SlideshowModule } from 'ng-simple-slideshow';
+import { HttpClientModule } from "@angular/common/http";
 
 
 import { AppComponent } from './app.component';
@@ -18,6 +19,7 @@ import { SanPhamService } from "./san-pham.service";
 import { FormsModule } from '@angular/forms';
 import { ProductListComponent, ProductDetailDialogComponent} from './product-list/product-list.component';
 import { SwipeService } from './slideshow/swipe.service';
+import { CategoryService } from './category.service';
 
 
 @NgModule({
@@ -37,13 +39,13 @@ import { SwipeService } from './slideshow/swipe.service';
     MatDialogModule,
     BrowserAnimationsModule,
     FormsModule,
-    SlideshowModule
-    
+    SlideshowModule,
+    HttpClientModule
     
   ],
   entryComponents: [ ProductDetailDialogComponent],
 
-  providers: [SanPhamService, /*SwipeService, TransferState*/],
+  providers: [SanPhamService, CategoryService /*SwipeService, TransferState*/],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

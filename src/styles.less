@@ -1,14 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 @font-color: black;
+@blue-color: #07bbd9;
 @background-color: white;
 @opacity-hover: 0.8;
+@font-size: 0.95rem;
+
+
 
 body {
     color: @font-color;
     background-color: @background-color;
     margin: auto;
     width: 90%;
+    font-size: @font-size;
 }
 
 .nav-link {
@@ -16,7 +21,7 @@ body {
 }
 
 .nav-link.active {
-    color: #07bbd9
+    color: @blue-color;
 }
 
 .nav-link:hover {
@@ -27,6 +32,27 @@ a:hover {
     cursor: pointer;
 }
 
+.blue-text-color {
+    color: @blue-color;
+}
+
+ul, ol {
+    li {
+    padding: 5px;
+    }
+}
+
+table td {
+    padding-bottom: 0px;
+    padding-top: 6px;
+    line-height: 18px;
+}
+
+button {    
+    background-color: @blue-color;
+    border: none;
+    color: white;
+}
 
 
 

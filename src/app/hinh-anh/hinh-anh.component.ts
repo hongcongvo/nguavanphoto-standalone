@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { CATEGORIES } from '../mock-categories';
 import { Category } from "../category";
 import { SanPham } from '../san-pham';
 import { SanPhamService } from "../san-pham.service";
+import { CategoryService } from '../category.service';
 
 @Component({
   selector: 'app-hinh-anh',
@@ -11,15 +11,25 @@ import { SanPhamService } from "../san-pham.service";
 })
 export class HinhAnhComponent implements OnInit {
 
-  categories = CATEGORIES;
+  categories : Category[];
   showedSanPhams : SanPham[];
-  activeCategory: number;
+  activeCategory: string;
 
-  constructor(public sanPhamService: SanPhamService) { }
+  constructor(public sanPhamService: SanPhamService, public categoryService: CategoryService) {
+
+   }
 
   ngOnInit() {
-    this.selectCategory(this.categories[0]);
+    this.categoryService.getCategories().subscribe(
+      data => {
+      this.categories = data;
+      this.selectCategory(this.categories[0]);
+      },
+      error => console.log(error.error),
+      () => console.log('>>>>>get categories completed!'));
   }
+
+  
 
   getShowedSanPhams(category: Category) {
     this.showedSanPhams = this.sanPhamService.getSanPhamByCategory(category);
@@ -27,7 +37,7 @@ export class HinhAnhComponent implements OnInit {
 
   selectCategory(category:Category) {
     this.getShowedSanPhams(category);
-    this.activeCategory = category.id;
+    this.activeCategory = category._id;
 
   }
 

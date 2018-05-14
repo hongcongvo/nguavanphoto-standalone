@@ -1,4 +1,7 @@
 export class Category {
-    id: number;
+    _id: string;
     name: string;
+    categoryId: string;
+    displayStr: string;
+    order: number;
 }
