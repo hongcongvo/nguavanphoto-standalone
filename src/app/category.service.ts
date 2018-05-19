@@ -7,7 +7,7 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class CategoryService {
-  url = 'http://localhost:3000/category';
+  url = 'http://localhost:3000/api/category';
  categories: Category[] = [];
 
   constructor(private httpClient: HttpClient) {

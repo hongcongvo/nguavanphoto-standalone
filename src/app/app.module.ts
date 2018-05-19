@@ -20,6 +20,7 @@ import { FormsModule } from '@angular/forms';
 import { ProductListComponent, ProductDetailDialogComponent} from './product-list/product-list.component';
 import { SwipeService } from './slideshow/swipe.service';
 import { CategoryService } from './category.service';
+import {  OrderService} from "./order.service";
 
 
 @NgModule({
@@ -45,7 +46,7 @@ import { CategoryService } from './category.service';
   ],
   entryComponents: [ ProductDetailDialogComponent],
 
-  providers: [SanPhamService, CategoryService /*SwipeService, TransferState*/],
+  providers: [SanPhamService, CategoryService, OrderService /*SwipeService, TransferState*/],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

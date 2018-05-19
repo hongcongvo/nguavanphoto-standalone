@@ -25,7 +25,7 @@ export class HinhAnhComponent implements OnInit {
       this.categories = data;
       this.selectCategory(this.categories[0]);
       this.categories.forEach(element => {
-        element.imageUrl = "http://localhost:3000/image/" + element.imageUrl;
+        element.imageUrl = "http://localhost:3000/api/image/" + element.imageUrl;
       });
       },
       error => console.log(error.error),
