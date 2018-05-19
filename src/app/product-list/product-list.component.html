@@ -1,7 +1,7 @@
 <div class="row" style="padding-top: 10px; width: 90%; margin: auto;">
   <div *ngFor="let sanPham of sanPhams; let i = index" class="col-sm-4" style="text-align: center;">
     <a>
-      <img [(src)]="sanPham.pathToImage" (click)="openDialog(i)" style="width: 80%;">
+      <img [src]="sanPham.imageUrl" (click)="openDialog(i)" style="width: 80%;">
     </a>
   </div>
 </div>

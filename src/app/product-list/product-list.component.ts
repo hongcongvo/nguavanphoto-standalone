@@ -22,7 +22,7 @@ export class ProductListComponent implements OnInit {
   openDialog(selectecdProductIndex: number){
     this.imageUrls = [];
     for (const sanPham of this.sanPhams) {
-      this.imageUrls.push(sanPham.pathToImage);
+      this.imageUrls.push(sanPham.imageUrl);
     }
     let  matDialogRef= this.dialog.open(ProductDetailDialogComponent, {
       width: '60%', disableClose: true,

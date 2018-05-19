@@ -1,39 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Category } from './category';
 import { SanPham } from "./san-pham";
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class SanPhamService {
 
-  constructor() { }
+  url="http://localhost:3000/api/product";
 
-  getSanPhamByCategory(category: Category) {
-    if(category.displayStr == "Mỹ phẩm") {
-      return [
-      {name: 'sp2', pathToImage:'../../assets/images/fragrance-25-343x343.jpg'},
-      {name: 'sp2', pathToImage:'../../assets/images/fragrance-25-343x343.jpg'},
-      {name: 'sp2', pathToImage:'../../assets/images/fragrance-25-343x343.jpg'},
-      {name: 'sp2', pathToImage:'../../assets/images/electronics-23-343x343.jpg'},
-      {name: 'sp2', pathToImage:'../../assets/images/fragrance-25-343x343.jpg'},
-      {name: 'sp2', pathToImage:'../../assets/images/fragrance-25-343x343.jpg'},
-      {name: 'sp2', pathToImage:'../../assets/images/electronics-23-343x343.jpg'},
-      {name: 'sp2', pathToImage:'../../assets/images/fragrance-25-343x343.jpg'},
-      {name: 'sp2', pathToImage:'../../assets/images/fragrance-25-343x343.jpg'},
-      {name: 'sp2', pathToImage:'../../assets/images/fragrance-25-343x343.jpg'}
-    ]
-    }
-     else {
-      return [
-        {name: 'sp2', pathToImage:'../../assets/images/electronics-23-343x343.jpg'},
-        {name: 'sp2', pathToImage:'../../assets/images/electronics-23-343x343.jpg'},
-        {name: 'sp2', pathToImage:'../../assets/images/electronics-23-343x343.jpg'},
-        {name: 'sp2', pathToImage:'../../assets/images/electronics-23-343x343.jpg'},
-        {name: 'sp2', pathToImage:'../../assets/images/electronics-23-343x343.jpg'},
-        {name: 'sp2', pathToImage:'../../assets/images/electronics-23-343x343.jpg'},
-        {name: 'sp2', pathToImage:'../../assets/images/electronics-23-343x343.jpg'},
-        {name: 'sp2', pathToImage:'../../assets/images/electronics-23-343x343.jpg'}
-      ]
-     }
+  constructor(private httpClient: HttpClient) { }
+
+  getSanPhamByCategory(category: Category): Observable<SanPham[]> {
+    return this.httpClient.get<SanPham[]>(this.url + "?category=" + category._id);
   }
 
 }

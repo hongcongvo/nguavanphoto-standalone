@@ -1,4 +1,5 @@
 export class SanPham {
-    name: string;
-    pathToImage: string;
+    _id: string;
+    displayStr: string;
+    imageUrl: string;
 }

@@ -16,12 +16,12 @@ export class LienHeComponent implements OnInit {
   }
 
   ngOnInit() {
-    /*
+    
     this.order.name = "Bosch";
     this.order.email = "test5678@gmail.com";
     this.order.tel = "0912345678";
     this.order.address = "Ho Chi Minh";
-    this.order.description = "testing";*/
+    this.order.description = "testing";
   }
 
   createOrder() {

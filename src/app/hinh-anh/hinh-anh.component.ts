@@ -35,8 +35,16 @@ export class HinhAnhComponent implements OnInit {
   
 
   getShowedSanPhams(category: Category) {
-    this.showedSanPhams = this.sanPhamService.getSanPhamByCategory(category);
-  }
+    this.sanPhamService.getSanPhamByCategory(category).subscribe(data => {
+      this.showedSanPhams = data;
+      this.showedSanPhams.forEach(element => {
+        element.imageUrl = "http://localhost:3000/api/image/" + element.imageUrl;
+      });
+    },
+    error => console.log(error.error),
+    () => console.log('>>>>>get products completed!'));
+  };
+  
 
   selectCategory(category:Category) {
     this.getShowedSanPhams(category);
