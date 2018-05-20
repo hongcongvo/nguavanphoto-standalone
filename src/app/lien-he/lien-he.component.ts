@@ -16,12 +16,12 @@ export class LienHeComponent implements OnInit {
   }
 
   ngOnInit() {
-    
+    /*
     this.order.name = "Bosch";
     this.order.email = "test5678@gmail.com";
     this.order.tel = "0912345678";
     this.order.address = "Ho Chi Minh";
-    this.order.description = "testing";
+    this.order.description = "testing";*/
   }
 
   createOrder() {
@@ -34,7 +34,12 @@ export class LienHeComponent implements OnInit {
       let file = event.target.files[0];
       reader.readAsDataURL(file);
       reader.onload = () => {
-        this.order.image = reader.result.split(',')[1];
+		this.order.attachedFile = 
+		{ 
+			fileName: file.name, 
+		    content:reader.result.split(',')[1] 
+		};
+
         this.selectedFileName = file.name;
       };
     }

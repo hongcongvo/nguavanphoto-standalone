@@ -4,5 +4,8 @@ export class Order {
     tel: string;
     address: string;
     description: string;
-    image: string;
+    attachedFile: {
+      fileName: string;
+      content: string;
+    }
 }
