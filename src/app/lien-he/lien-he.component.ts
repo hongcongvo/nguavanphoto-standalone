@@ -10,7 +10,7 @@ import { OrderService } from '../order.service';
 export class LienHeComponent implements OnInit {
 
   order: Order = new Order();
-  selectedFileName: String = "Select file...";
+  selectedFileName: String = "Không file nào được chọn";
 
   constructor(public orderService: OrderService) { 
   }
